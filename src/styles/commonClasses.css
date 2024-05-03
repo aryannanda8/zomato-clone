@@ -1,0 +1,13 @@
+.max-width{
+    max-width: 1100px;
+    margin: 0 auto;
+    
+}
+.text-desc{
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.text-desc-2{
+    font-weight: 350;
+    letter-spacing: 1px;
+}
