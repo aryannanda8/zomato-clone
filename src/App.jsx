@@ -6,9 +6,10 @@ import HomeMain from './Components/Home/HomeMain'
 
 function App() {
   return (
+    
     <div  style={{ font: "Nunito" } }>
-      {/* <Header /> */}
-      {/* <Home /> */}
+      {/* <Header />
+      <Home /> */}
       
       <HomeMain/>
     </div>
