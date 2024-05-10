@@ -17,6 +17,9 @@ module.exports = {
         'sliderArrow': 'rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px',
         'sliderItemShadow': 'rgba(0, 0, 0, 0.08) 0px 3px 12px',
       },
+      // backgroundColor: {
+      //   'drop': 'linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%)'
+      // },
       colors: {
         'primaryBg': 'rgb(255, 255, 255)',
         'zomatoGray': '#828282 ',
@@ -29,6 +32,11 @@ module.exports = {
         'headingText': '#1c1c1c',
         'sliderAngle': 'rgb(105, 105, 105)',
         'grayBg': 'rgb(248, 248, 248)',
+        'safeColor': 'rgb(130, 130, 130)',
+        'desc': 'rgb(54, 54, 54)',
+        'drop': 'linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%)',
+        'goldColor': 'rgb(255, 211, 133)',
+        'bordColor': '#e5e7eb',
       }
     },
   },

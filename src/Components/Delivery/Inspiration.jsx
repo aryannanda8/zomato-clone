@@ -58,7 +58,7 @@ function Inspiration() {
 
             </div>
                 <div className='w-full  '>
-                    <SliderComp arr={inspirationList} />
+                    <SliderComp arr={inspirationList} config={1} itemsToShow={6} />
             </div>            
         </div>
     )

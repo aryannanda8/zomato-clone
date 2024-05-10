@@ -5,8 +5,10 @@ import { PiSlidersHorizontalLight } from "react-icons/pi";
 import { FaAngleDown } from "react-icons/fa";
 import Inspiration from './Inspiration';
 import TopBrands from './TopBrands';
-
+import ExploreSection from '../Common/ExploreSection/ExploreSection';
+import restaurants from '../../data/restaurants';
 function Delivery() {
+
   const deliveryFilters = [
     {
 
@@ -25,13 +27,13 @@ function Delivery() {
     },
   ]
   return (
-    <div className=''>
-      <div className='max-width ' >
+    <div>
+    
         <Filters filterList={deliveryFilters} />
-      </div>
 
       <Inspiration />
-      <TopBrands/>
+      <TopBrands />
+      <ExploreSection list={restaurants} headingTitle={"Food Delivery Restaurants in Delhi NCR"} type={"delivery"} />
     </div>
   )
 }

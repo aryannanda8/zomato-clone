@@ -2,11 +2,11 @@ import React from 'react'
 import SliderComp from '../Common/SliderComp'
 
 const brandList = [
-    {
-        title: "McDonald's",
-        cover: "https://b.zmtcdn.com/data/brand_creatives/logos/bb30587d1148b6ab628a61945f64bf88_1625164768.png?output-format=webp",
-        time: '25 min',
-    },
+    // {
+    //     title: "McDonald's",
+    //     cover: "https://b.zmtcdn.com/data/brand_creatives/logos/bb30587d1148b6ab628a61945f64bf88_1625164768.png?output-format=webp",
+    //     time: '25 min',
+    // },
     {
         title: "Haldiram's",
         cover: "https://b.zmtcdn.com/data/brand_creatives/logos/22529ff52d41a4aa3b36ac1e7e0c0db3_1605099406.png?output-format=webp",
@@ -27,20 +27,20 @@ const brandList = [
         cover: "https://b.zmtcdn.com/data/brand_creatives/logos/9302c59eca94abbee01aec9acf9305f6_1676471786.png?output-format=webp",
     },
     {
-        title: "Bikkgane Biryani",
-        cover: "https://b.zmtcdn.com/data/brand_creatives/logos/4bf3cd23b591c0292aba5fe476fadbef_1625160389.png?output-format=webp",
+        title: "The Burger Club",
+        cover: "https://b.zmtcdn.com/data/brand_creatives/logos/26155927d30d8e56d537b65d6a5b9969_1617944079.png",
         time: '25 min',
     },
     {
-        title: "Chaayos",
-        cover: "https://b.zmtcdn.com/data/brand_creatives/logos/ed9718e64b3307ae4aaee0bc81c1ea15_1625155060.png?output-format=webp",
+        title: "Biryani Blues",
+        cover: "https://b.zmtcdn.com/data/brand_creatives/logos/7fdbbe0f4f0aff0bb3775f3ac819ecb0_1638424082.png",
         time: '25 min',
     },
-    // {
-    //     title: "Rolls",
-    //     cover: "https://b.zmtcdn.com/data/dish_images/c2f22c42f7ba90d81440a88449f4e5891634806087.png",
-    // time: '25 min',
-    // },
+    {
+        title: "Burger Singh",
+        cover: "https://b.zmtcdn.com/data/brand_creatives/logos/a175a6938688350fb3da3018da6293db_1625244343.png",
+    time: '25 min',
+    },
     // {
     //     title: "Dosa",
     //     cover: "https://b.zmtcdn.com/data/o2_assets/8dc39742916ddc369ebeb91928391b931632716660.png",
@@ -69,7 +69,7 @@ function TopBrands() {
 
             </div>
             <div className='w-full  '>
-                <SliderComp arr={brandList} />
+                <SliderComp arr={brandList} config={2} itemsToShow={6} />
             </div>
         </div>
     )

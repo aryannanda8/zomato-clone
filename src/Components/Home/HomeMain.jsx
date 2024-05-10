@@ -4,6 +4,7 @@ import TabOptions from '../Common/TabOptions/TabOptions'
 import Delivery from '../Delivery/Delivery'
 import DiningOut from '../DiningOut/DiningOut'
 import Nightlife from '../NightLife/Nightlife'
+import { Routes, Route } from 'react-router-dom'
 
 function HomeMain() {
 
@@ -12,24 +13,13 @@ function HomeMain() {
 
         <div>
             <HeaderMain />
-            <TabOptions activeTab={activeTab} setActiveTab={ setActiveTab} />
-            {getCorrectScreen(activeTab)}
-            This is HomeMain
+            <TabOptions activeTab={activeTab} setActiveTab={setActiveTab} />
+        
+
         </div>
     )
 }
 
-const getCorrectScreen = (tab) => {
-    switch (tab) {
-        case "Delivery":
-            return <Delivery/>
-        case "Dining Out":
-            return <DiningOut/>
-        case "Nightlife":
-            return <Nightlife/>
-        default:
-            return <div>Delivery</div>
-      }
-}
+
 
 export default HomeMain

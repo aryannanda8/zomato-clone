@@ -1,4 +1,5 @@
 import React from 'react'
+import SearchBar from '../Common/SearchBar'
 
 function Header() {
     return (
@@ -17,7 +18,11 @@ function Header() {
                 <img src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png" alt="Zomato"
                     className='object-contain h-14 w-full' />
                 <h2 className='text-4xl font-light'>Discover the best food & drinks in <b>Delhi NCR</b></h2>
-                <div type="text" style={{ background: "white", border: "", height: "48px", width: "45rem", borderRadius: "10px" }} />
+                {/* <div type="text" style={{ background: "white", border: "", height: "48px", width: "45rem", borderRadius: "10px" }} /> */}
+              
+                <SearchBar size={2} />
+               
+                
             </div>
 
         </div>
