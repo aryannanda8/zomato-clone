@@ -37,6 +37,7 @@ module.exports = {
         'drop': 'linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%)',
         'goldColor': 'rgb(255, 211, 133)',
         'bordColor': '#e5e7eb',
+        'loginColor': 'rgb(28, 28, 28)'
       }
     },
   },

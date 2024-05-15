@@ -11,7 +11,7 @@ function HomeMain() {
     const [activeTab, setActiveTab] = useState("Delivery")
     return (
 
-        <div>
+        <div className=''>
             <HeaderMain />
             <TabOptions activeTab={activeTab} setActiveTab={setActiveTab} />
         

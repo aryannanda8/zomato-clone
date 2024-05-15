@@ -44,6 +44,8 @@ function Home() {
 
 
         <Collections />
+        <GetApp />
+        <Footer/>
        
 
         {/* <Routes>

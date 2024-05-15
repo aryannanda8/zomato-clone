@@ -43,23 +43,23 @@ const inspirationList = [
         title: "Pizza",
         cover: "https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png",
     },
-   
-   
+
+
 
 ]
 
 function Inspiration() {
     return (
-        <div className='bg-grayBg py-[40px]'>
-            <div className='max-width '>
+        <div className=' bg-grayBg py-[40px] w-full '>
+            <div className='  md: max-width '>
                 <div className='collection-title'>
                     Inspiration for your first order
                 </div>
 
             </div>
-                <div className='w-full  '>
-                    <SliderComp arr={inspirationList} config={1} itemsToShow={6} />
-            </div>            
+            <div className='  '>
+                <SliderComp arr={inspirationList} config={1} itemsToShow={6} />
+            </div>
         </div>
     )
 }

@@ -27,9 +27,9 @@ function Delivery() {
     },
   ]
   return (
-    <div>
-    
-        <Filters filterList={deliveryFilters} />
+    <div className='w-full'>
+
+      <Filters filterList={deliveryFilters} />
 
       <Inspiration />
       <TopBrands />

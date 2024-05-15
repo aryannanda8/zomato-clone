@@ -11,6 +11,7 @@ import NcrRoutes from './Routes/NcrRoutes'
 import HeaderMain from './Components/Header/HeaderMain'
 import LoadingBar from './Components/Common/LoadingBar'
 import ScrollToTop from './Components/Common/Scroll/ScrollToTop'
+import McDonalds from './Components/McDonalds'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/ncr/delivery/mcdonalds-janpath-new-delhi' element={<McDonalds/>} />
         <Route path='/ncr/*' element={<NcrRoutes />} />
       </Routes>
     </div>

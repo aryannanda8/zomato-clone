@@ -5,6 +5,7 @@ import DiningOut from '../Components/DiningOut/DiningOut'
 import Nightlife from '../Components/NightLife/Nightlife'
 import { Link, Routes, Route } from 'react-router-dom'
 import LoadingBar from '../Components/Common/LoadingBar'
+import McDonalds from '../Components/McDonalds'
 function NcrRoutes() {
     return (
         <div>
@@ -16,7 +17,7 @@ function NcrRoutes() {
                 <Route path='/delivery' element={<Delivery />} />
                 <Route path='/dining' element={<DiningOut />} />
                 <Route path='/drinks-and-nightlife' element={<Nightlife />} />
-                
+                <Route path='/delivery/mcdonalds-janpath-new-delhi' element={<McDonalds/>} />
             </Routes>
         </div>
     )
