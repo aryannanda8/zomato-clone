@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaDove } from 'react-icons/fa'
 import SliderComp from './SliderComp'
+import useMediaQuery from '../Delivery/UseMediaQuery';
 
 const collectionList = [
   {
@@ -47,6 +48,19 @@ const collectionList = [
 ]
 
 function Collections() {
+  const isMediumScreen = useMediaQuery('(max-width: 1000px)');
+  const isExtraSmallScreen = useMediaQuery('(max-width: 480px)');
+  const isSmallScreen = useMediaQuery('(max-width: 850px)');
+
+  let itemsToShow = 4;  // Default number of items to show
+
+  if (isExtraSmallScreen) {
+      itemsToShow = 1;
+  } else if (isSmallScreen) {
+      itemsToShow = 2;
+  } else if (isMediumScreen) {
+      itemsToShow = 3;
+  }
   return (
     <div className='py-[14px] bg-grayBg'>
       <div className='max-width'>
@@ -57,7 +71,7 @@ function Collections() {
           <p className='text-desc font-[400]'>Explore curated lists of top restaurants, cafes, pubs, and bars in Delhi NCR, based on trends</p>
         </div>
       </div>
-      <SliderComp arr={collectionList} config={3} itemsToShow={4} />
+      <SliderComp arr={collectionList} config={3} itemsToShow={itemsToShow} />
     </div>
   )
 }

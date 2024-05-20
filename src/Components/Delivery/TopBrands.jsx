@@ -1,5 +1,6 @@
 import React from 'react'
 import SliderComp from '../Common/SliderComp'
+import useMediaQuery from './UseMediaQuery';
 
 const brandList = [
     // {
@@ -58,6 +59,24 @@ const brandList = [
 
 
 function TopBrands() {
+    const isMediumScreen = useMediaQuery('(max-width: 768px)');
+    const isSmallScreen = useMediaQuery('(max-width: 480px)');
+    const isExtraSmallScreen = useMediaQuery('(max-width: 640px)');
+    const isMdScreen = useMediaQuery('(max-width: 950px)');
+    const isLgScreen = useMediaQuery('(max-width: 1150px)');
+
+    let itemsToShow = 6;  // Default number of items to show
+
+    if (isSmallScreen || isExtraSmallScreen) {
+        itemsToShow = 2;
+    } else if (isMediumScreen) {
+        itemsToShow = 3;
+    }
+    else if (isMdScreen) {
+        itemsToShow = 4;
+    } else if (isLgScreen) {
+        itemsToShow = 5;
+    }
     return (
         <div className=' py-[40px]'>
             <div className='max-width '>
@@ -69,7 +88,7 @@ function TopBrands() {
 
             </div>
             <div className='w-full  '>
-                <SliderComp arr={brandList} config={2} itemsToShow={6} />
+                <SliderComp arr={brandList} config={2} itemsToShow={itemsToShow} />
             </div>
         </div>
     )
