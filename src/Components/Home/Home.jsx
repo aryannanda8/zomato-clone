@@ -25,7 +25,7 @@ function Home() {
           {/* <Link to='/ncr' > 
             dog
           </Link> */}
-          <div className='flex m-9'>
+          <div className='flex m-9 flex-wrap md:flex-nowrap justify-center'>
             
               <SmallCard imgSrc={orderOnlineImage} text="Order Online" text2="Stay home and order to your doorstep" link={'delivery'} />
             

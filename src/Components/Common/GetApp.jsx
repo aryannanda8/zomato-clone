@@ -12,8 +12,8 @@ const GetApp = () => {
             className="w-[16.5rem] "
           />
         </div>
-        <div className="rightSide flex flex-col gap-3">
-          <div className="text-[2rem] md:text-[3rem] font-[450]">Get the Zomato App</div>
+        <div className="rightSide flex flex-col gap-3 text-center justify-center items-center">
+          <div className="text-[2rem] md:text-[3rem] font-[450] ">Get the Zomato App</div>
           <div className="mt-2 mb-2 font-[350] w-[90%] leading-7">
             We will send you a link, open it on your phone to download the app
           </div>
@@ -49,8 +49,8 @@ const GetApp = () => {
                 </label>
               </div>
             </div>
-            <div className="inputs flex flex-col gap-3 md:flex-row justify-between mt-[2rem]  ">
-              <div className="inputtypes">
+            <div className="inputs flex flex-col gap-3 md:flex-row justify-between mt-[2rem] items-center  ">
+              <div className="inputtypes ">
                 {inputType === true ? (
                   <input
                     type="Email"
@@ -74,9 +74,9 @@ const GetApp = () => {
               </button>
 
             </div>
-            <div className=" mb-[2rem]">
-              <div className="mt-[4px] mb-[1rem]">Download app from</div>
-              <div className="flex flex-wrap">
+            <div className=" mb-[2rem] ">
+              <div className="mt-[4px] mb-[1rem] ">Download app from</div>
+              <div className="flex flex-wrap justify-center">
                 <img className="m-3 mt-0 w-[10rem] cursor-pointer" src='https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png' alt="appstore" />
                 <img
                   className="m-3 mt-0 w-[10rem] cursor-pointer"

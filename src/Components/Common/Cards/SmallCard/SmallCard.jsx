@@ -8,7 +8,7 @@ function SmallCard({ imgSrc, text, text2, link }) {
         });
     }
     return (
-        <div className='mx-2.5 rounded-xl h-56 overflow-hidden hover:transform duration-300 ease transition-transform hover:scale-[1.04]'>
+        <div className='m-2.5 rounded-xl h-56 overflow-hidden hover:transform duration-300 ease transition-transform hover:scale-[1.04]'>
             <Link to={`/ncr/${link}`} onClick={scrollToTop}>
                 <div className='flex flex-col h-full '>
                     <div className=' h-48 overflow-hidden w-96'>

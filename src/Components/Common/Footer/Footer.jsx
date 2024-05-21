@@ -15,7 +15,7 @@ let Footer = () => {
         <div className={footerCss.innerFooter}>
             <div className={footerCss.sec1}>
                 <div className={footerCss.logoBox}>Zomato</div>
-                <div className={footerCss.filters}>
+                <div className={`${footerCss.filters} mt-5 md:mt-auto`}>
                     <div className={footerCss.filterBox}> <span>
                         <img className={footerCss.icon} src={indianFlag} alt="india flag" />
                     </span>

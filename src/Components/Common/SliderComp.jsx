@@ -28,7 +28,7 @@ function SliderComp({ arr, config, itemsToShow }) {
         }
     };
 
-    const containerWidth = itemWidth * itemsToShow - 30;
+    const containerWidth = itemWidth * itemsToShow - (config===3? 22:30);
 
     return (
         <div className='w-full ' style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', msOverflowStyle: 'none', scrollbarWidth: 'none' }}>
