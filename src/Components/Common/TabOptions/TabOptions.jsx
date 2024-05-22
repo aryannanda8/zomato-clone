@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function TabOptions({ activeTab, setActiveTab }) {
+function TabOptions({ activeTab }) {
   let navigate = useNavigate();
 
   const tabs = [
@@ -32,7 +32,7 @@ function TabOptions({ activeTab, setActiveTab }) {
   ];
 
   const handleClick = (name, path) => {
-    setActiveTab(name);
+    // setActiveTab(name);
     navigate(path);
   };
 

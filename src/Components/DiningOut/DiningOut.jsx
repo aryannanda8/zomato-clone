@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useDebugValue, useEffect } from 'react'
 import './diningOut.css'
 import Collections from '../Common/Collections'
 import Filters from '../Common/Filters'
@@ -33,9 +33,17 @@ const diningFilters = [
 
   },
 ]
-function DiningOut() {
+function DiningOut({ setActiveTab, activeTab , setVisible}) {
+  setVisible(true)
+  useEffect(() => {
+    
+        setActiveTab('Dining Out')
+  
+  }, [])           
+  
   return (
     <div> 
+      
       <Collections />
       <Filters filterList={diningFilters} />
       <GoldDiscount />

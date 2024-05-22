@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './header.css'
 import { FaLocationDot, FaCaretDown, FaAngleDown } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
@@ -26,6 +26,7 @@ function HeaderMain() {
   const handleRegister = () => {
     setRegister(!register);
   }
+
   return (
     <div className=' '>
 
@@ -53,19 +54,19 @@ function HeaderMain() {
       <div className='flex md:hidden mt-[20px] pb-2'>
         <div className='flex justify-between max-width-phone'>
           <div onClick={expandMenu} style={{ transition: 'opacity 0.5s ease-in' }}>
-            {expanded ? <IoClose size={22} style={{ opacity: expanded ? 1 : 0 }} /> : <GiHamburgerMenu size={22} style={{ opacity: expanded ? 0 : 1 }} className='cursor-pointer' />}
+            {expanded ? <IoClose size={22} className='cursor-pointer' style={{ opacity: expanded ? 1 : 0 }} /> : <GiHamburgerMenu size={22} style={{ opacity: expanded ? 0 : 1 }} className='cursor-pointer' />}
           </div>
 
           <img className='h-[27px]' src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png" alt="Zomato-logo" onClick={handleClick} />
         </div>
       </div>
 
-      <div className={expanded ? 'fixed left-0 top-[60px] w-[100%] h-full border-r border-r-gray-900 bg-white ease-in-out duration-500 z-10' : 'ease-in-out duration-500 fixed left-[-100%]'}>
+      <div className={expanded ? 'fixed  left-0 top-[60px] w-[100vw] h-full border-r border-r-gray-900 bg-white ease-in-out duration-500 z-[48]' : 'ease-in h-full duration-500 w-full fixed left-[-100%]'}>
         <ul className='flex flex-col p-[30px]'>
-          <li>Login</li>
+          <li onClick={handleLogin} className='cursor-pointer'>Login</li>
           <br />
 
-          <li>Sign Up</li>
+          <li onClick={handleRegister} className='cursor-pointer'>Sign Up</li>
 
         </ul>
 
@@ -73,12 +74,16 @@ function HeaderMain() {
       </div>
 
       {(login || register) && <div>
-        <div >
-          <UserModal config={1} />
-        </div>
-        <div >
-          <UserModal config={2} />
-        </div>
+        {login &&
+          <div >
+            <UserModal setOne={setRegister} config={1} close={handleLogin} />
+          </div>
+        }
+        {register &&
+          <div >
+            <UserModal setOne={setLogin} config={2} close={handleRegister} />
+          </div>
+        }
       </div>}
     </div>
 

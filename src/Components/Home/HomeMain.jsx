@@ -6,15 +6,16 @@ import DiningOut from '../DiningOut/DiningOut'
 import Nightlife from '../NightLife/Nightlife'
 import { Routes, Route } from 'react-router-dom'
 
-function HomeMain() {
-
-    const [activeTab, setActiveTab] = useState("Delivery")
+function HomeMain({activeTab, visible }) {
+    
     return (
 
         <div className=''>
+            
             <HeaderMain />
-            <TabOptions activeTab={activeTab} setActiveTab={setActiveTab} />
-        
+            {
+                visible &&   <TabOptions activeTab={activeTab} />
+            }
 
         </div>
     )

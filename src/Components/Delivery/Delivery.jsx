@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './delivery.css'
 import Filters from '../Common/Filters'
 import { PiSlidersHorizontalLight } from "react-icons/pi";
@@ -7,8 +7,14 @@ import Inspiration from './Inspiration';
 import TopBrands from './TopBrands';
 import ExploreSection from '../Common/ExploreSection/ExploreSection';
 import restaurants from '../../data/restaurants';
-function Delivery() {
-
+function Delivery({ setActiveTab, activeTab, setVisible }) {
+  setVisible(true)
+  useEffect(() => {
+    
+    setActiveTab('Delivery')
+    
+   
+  }, [])
   const deliveryFilters = [
     {
 

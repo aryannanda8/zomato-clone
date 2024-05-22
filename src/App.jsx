@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
 import { Link, Routes, Route } from 'react-router-dom'
@@ -11,16 +11,18 @@ import NcrRoutes from './Routes/NcrRoutes'
 import HeaderMain from './Components/Header/HeaderMain'
 import LoadingBar from './Components/Common/LoadingBar'
 import ScrollToTop from './Components/Common/Scroll/ScrollToTop'
-import McDonalds from './Components/McDonalds'
+
 
 function App() {
+  const [activeTab, setActiveTab] = useState("Delivery")
+  // const defaul = useContext()
+  // console.log(defaul);
   return (
     <div style={{ font: "Nunito" }}>
-      
+
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/ncr/delivery/mcdonalds-janpath-new-delhi' element={<McDonalds/>} />
-        <Route path='/ncr/*' element={<NcrRoutes />} />
+        <Route path='/ncr/*' element={<NcrRoutes setActiveTab={setActiveTab} activeTab={activeTab} />} />
       </Routes>
     </div>
   );

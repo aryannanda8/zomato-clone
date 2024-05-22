@@ -5,9 +5,7 @@ import { useNavigate } from 'react-router-dom';
 function ExploreCard({ restaurant, type }) {
     let navigate = useNavigate();
 
-    const handleClick = () => {
-        navigate('/ncr/delivery/mcdonalds-janpath-new-delhi')
-    }
+    
     const name = restaurant?.info?.name ?? "";
     const coverImg = restaurant?.info?.image?.url;
     const deliveryTime = type === 'dining' ? null : restaurant?.order?.deliveryTime;
@@ -19,7 +17,11 @@ function ExploreCard({ restaurant, type }) {
     const goldOff = restaurant?.gold == '' ? null : restaurant?.gold?.offerValue
     const locality = type === 'dining' ? restaurant?.info?.locality?.name : null;
     const distance = type === 'dining' ? restaurant?.distance : null;
+    const cardAction = restaurant?.cardAction?.clickUrl;
 
+    const handleClick = () => {
+        navigate(cardAction, {state:{restaurant}})
+    }
     return (
         <div className='w-full lg:max-w-[340px] h-fit  rounded-[17px] cursor-pointer overflow-hidden border border-transparent hover:border-gray-300 hover:shadow-customShadow transition duration-400 ease-in-out relative' onClick={handleClick}>
 

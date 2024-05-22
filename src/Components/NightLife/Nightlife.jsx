@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './nightlife.css'
 import Collections from '../Common/Collections'
 import { PiSlidersHorizontalLight } from "react-icons/pi";
@@ -19,19 +19,25 @@ const nightLifeFilters = [
   {
     title: "Rating: 4.0+",
   },
-  
+
   {
     title: "Pubs & Bars",
 
   },
 ]
-function Nightlife() {
+function Nightlife({ setActiveTab, activeTab, setVisible }) {
+  setVisible(true)
+  useEffect(() => {
+    
+    setActiveTab('Nightlife')
+
+  }, [])
   return (
     <div>
-      <Collections/>
-      <Filters filterList={nightLifeFilters}/>
+      <Collections />
+      <Filters filterList={nightLifeFilters} />
       <GoldDiscount />
-      <ExploreSection list={nightLifeRestaurants} headingTitle={"Nightlife: Night clubs, pubs & bar in Delhi NCR"}/>
+      <ExploreSection list={nightLifeRestaurants} headingTitle={"Nightlife: Night clubs, pubs & bar in Delhi NCR"} />
     </div>
   )
 }

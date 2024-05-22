@@ -17,14 +17,14 @@ const GetApp = () => {
           <div className="mt-2 mb-2 font-[350] w-[90%] leading-7">
             We will send you a link, open it on your phone to download the app
           </div>
-          <div className="radio mt-1 mb-1">
-            <div className="radio flex mt-1 mb-1">
+          <div className=" mt-1 mb-1">
+            <div className=" flex mt-1 mb-1">
               <div
                 className="mr-3 ml-3 flex items-center"
                 onClick={() => setInputType(true)}
               >
                 <input
-                  className="w-5 h-5 accent-[#ef4f5f] cursor-pointer"
+                  className="w-5 h-5 ml-6 md:ml-[-2px] accent-[#ef4f5f] cursor-pointer"
                   type="radio"
                   name="radio"
                   id="email"

@@ -171,178 +171,7 @@ const nightLifeRestaurants = [
         "isDisabled": false,
         "bottomContainers": []
     },
-    {
-        "type": "restaurant",
-        "info": {
-            "resId": 18423151,
-            "name": "The Darzi Bar & Kitchen",
-            "image": {
-                "url": "https://b.zmtcdn.com/data/pictures/1/18423151/7f72a886554a5070b29e4eb2f28cd93a_featured_v2.jpg",
-                "urlWithParams": "https://b.zmtcdn.com/data/pictures/1/18423151/7f72a886554a5070b29e4eb2f28cd93a_featured_v2.jpg?fit=around%7C108%3A108&crop=108%3A108%3B%2A%2C%2A"
-            },
-            "o2FeaturedImage": {
-                "url": "https://b.zmtcdn.com/data/pictures/1/18423151/c5d075ea527949b8286fd0491d638fe8_o2_featured_v2.jpg"
-            },
-            "rating": {
-                "has_fake_reviews": 0,
-                "aggregate_rating": "3.9",
-                "rating_text": "3.9",
-                "rating_subtitle": "Good",
-                "rating_color": "9ACD32",
-                "votes": "4,805",
-                "subtext": "REVIEWS",
-                "is_new": false
-            },
-            "ratingNew": {
-                "newlyOpenedObj": null,
-                "suspiciousReviewObj": null,
-                "ratings": {
-                    "DINING": {
-                        "rating_type": "DINING",
-                        "rating": "4.2",
-                        "reviewCount": "4,785",
-                        "reviewTextSmall": "4,785 Reviews",
-                        "subtext": "4,785 Dining Reviews",
-                        "color": "#1C1C1C",
-                        "ratingV2": "4.2",
-                        "subtitle": "DINING",
-                        "sideSubTitle": "Dining Ratings",
-                        "bgColorV2": {
-                            "type": "green",
-                            "tint": "700"
-                        },
-                        "newOnDining": false
-                    },
-                    "DELIVERY": {
-                        "rating_type": "DELIVERY",
-                        "rating": "3.6",
-                        "reviewCount": "20",
-                        "reviewTextSmall": "20 Reviews",
-                        "subtext": "20 Delivery Reviews",
-                        "color": "#E23744",
-                        "ratingV2": "3.6",
-                        "subtitle": "DELIVERY",
-                        "sideSubTitle": "Delivery Ratings",
-                        "bgColorV2": {
-                            "type": "green",
-                            "tint": "600"
-                        },
-                        "newOnDelivery": false
-                    }
-                }
-            },
-            "cft": {
-                "text": "₹2,800 for two"
-            },
-            "cfo": {
-                "text": "₹1,150 for one"
-            },
-            "locality": {
-                "name": "Middle Circle, Connaught Place, New Delhi",
-                "address": "H 55, 1st Floor, Outer Circle, Connaught Place, New Delhi",
-                "localityUrl": "ncr/restaurants/in/middle-circle-connaught-place"
-            },
-            "timing": {
-                "text": "",
-                "color": ""
-            },
-            "cuisine": [
-                {
-                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNTBcIl19Il0%3D",
-                    "url": "https://www.zomato.com/ncr/restaurants/north-indian/",
-                    "name": "North Indian"
-                },
-                {
-                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMjVcIl19Il0%3D",
-                    "url": "https://www.zomato.com/ncr/restaurants/chinese/",
-                    "name": "Chinese"
-                },
-                {
-                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiM1wiXX0iXQ%3D%3D",
-                    "url": "https://www.zomato.com/ncr/restaurants/asian/",
-                    "name": "Asian"
-                },
-                {
-                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNTVcIl19Il0%3D",
-                    "url": "https://www.zomato.com/ncr/restaurants/italian/",
-                    "name": "Italian"
-                },
-                {
-                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNzVcIl19Il0%3D",
-                    "url": "https://www.zomato.com/ncr/restaurants/mughlai/",
-                    "name": "Mughlai"
-                },
-                {
-                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMTAwXCJdfSJd",
-                    "url": "https://www.zomato.com/ncr/restaurants/desserts/",
-                    "name": "Desserts"
-                },
-                {
-                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMTYzXCJdfSJd",
-                    "url": "https://www.zomato.com/ncr/restaurants/tea/",
-                    "name": "Tea"
-                },
-                {
-                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMjcwXCJdfSJd",
-                    "url": "https://www.zomato.com/ncr/restaurants/beverages/",
-                    "name": "Beverages"
-                }
-            ],
-            "should_ban_ugc": false,
-            "costText": {
-                "text": "₹2,800 for two"
-            }
-        },
-        "order": [],
-        "gold": {
-            "instant": 25,
-            "welcome_offer": false,
-            "gold_offer": true,
-            "text": "Flat",
-            "offerValue": "25% OFF",
-            "isGoldIcon": true
-        },
-        "takeaway": [],
-        "cardAction": {
-            "text": "",
-            "clickUrl": "/TheDarziBar/info",
-            "clickActionDeeplink": ""
-        },
-        "distance": "1.4 km",
-        "isPromoted": true,
-        "promotedText": "Promoted",
-        "trackingData": [
-            {
-                "table_name": "jadtracking",
-                "payload": "{\"banner_id\":\"4201379\",\"bzone\":\"0\",\"campaign_id\":\"13110243\",\"category_id\":\"1\",\"location_type\":\"city\",\"location_id\":\"1\",\"display_page\":\"dineout_home\",\"entity_type\":\"RESTAURANT\",\"entity_id\":\"18423151\",\"isNewAd\":\"34\",\"ad_position\":\"11\",\"slider_position\":\"11\",\"slider_sequence\":\"11\",\"creative_id\":\"0\",\"collection_id\":\"0\",\"data\":\"{\\\"type\\\":\\\"boost\\\",\\\"original_rank\\\":163,\\\"boosted_rank\\\":11,\\\"ordering_parameter_value\\\":{\\\"ads_ctr\\\":\\\"0\\\",\\\"cost_per_unit\\\":\\\"23.6\\\",\\\"distance\\\":\\\"1.1628236770629883\\\",\\\"organic_ctr\\\":\\\"0\\\",\\\"popularity_score\\\":\\\"0\\\",\\\"target_left\\\":\\\"258\\\"},\\\"search_id\\\":\\\"7ddb6673-1e74-46b3-92bf-b48614c0f612\\\",\\\"section_name\\\":\\\"more\\\",\\\"total_score\\\":0.33231928251091547}\",\"subzone_id\":\"0\"}",
-                "event_names": {
-                    "tap": "{\"action\":\"click\"}",
-                    "impression": "{\"action\":\"impression\"}",
-                    "served": "{\"action\":\"serve\"}"
-                }
-            },
-            {
-                "table_name": "zsearch_events_log",
-                "payload": "{\"search_id\":\"7ddb6673-1e74-46b3-92bf-b48614c0f612\",\"location_type\":\"delivery_cell\",\"location_id\":\"4110939063815503872\",\"page_type\":\"nightlife\",\"app_type\":\"new_web_consumer\",\"section\":\"restaurants\",\"entity_type\":\"restaurant\",\"entity_id\":\"18423151\",\"element_type\":\"listing\",\"rank\":11,\"metadata\":{\"is_ad\":\"true\"}}",
-                "event_names": {
-                    "tap": "{\"action\":\"tap\"}",
-                    "impression": "{\"action\":\"impression\"}"
-                }
-            }
-        ],
-        "allCTA": [
-            {
-                "type": "booking_cta",
-                "text": "Book a Table",
-                "clickUrl": "/TheDarziBar/book"
-            }
-        ],
-        "promoOffer": "",
-        "checkBulkOffers": false,
-        "bulkOffers": [],
-        "isDisabled": false,
-        "bottomContainers": []
-    },
+   
     {
         "type": "restaurant",
         "info": {
@@ -2064,7 +1893,179 @@ const nightLifeRestaurants = [
             "bulkOffers": [],
             "isDisabled": false,
             "bottomContainers": []
+    },
+    {
+        "type": "restaurant",
+        "info": {
+            "resId": 18423151,
+            "name": "The Darzi Bar & Kitchen",
+            "image": {
+                "url": "https://b.zmtcdn.com/data/pictures/1/18423151/7f72a886554a5070b29e4eb2f28cd93a_featured_v2.jpg",
+                "urlWithParams": "https://b.zmtcdn.com/data/pictures/1/18423151/7f72a886554a5070b29e4eb2f28cd93a_featured_v2.jpg?fit=around%7C108%3A108&crop=108%3A108%3B%2A%2C%2A"
+            },
+            "o2FeaturedImage": {
+                "url": "https://b.zmtcdn.com/data/pictures/1/18423151/c5d075ea527949b8286fd0491d638fe8_o2_featured_v2.jpg"
+            },
+            "rating": {
+                "has_fake_reviews": 0,
+                "aggregate_rating": "3.9",
+                "rating_text": "3.9",
+                "rating_subtitle": "Good",
+                "rating_color": "9ACD32",
+                "votes": "4,805",
+                "subtext": "REVIEWS",
+                "is_new": false
+            },
+            "ratingNew": {
+                "newlyOpenedObj": null,
+                "suspiciousReviewObj": null,
+                "ratings": {
+                    "DINING": {
+                        "rating_type": "DINING",
+                        "rating": "4.2",
+                        "reviewCount": "4,785",
+                        "reviewTextSmall": "4,785 Reviews",
+                        "subtext": "4,785 Dining Reviews",
+                        "color": "#1C1C1C",
+                        "ratingV2": "4.2",
+                        "subtitle": "DINING",
+                        "sideSubTitle": "Dining Ratings",
+                        "bgColorV2": {
+                            "type": "green",
+                            "tint": "700"
+                        },
+                        "newOnDining": false
+                    },
+                    "DELIVERY": {
+                        "rating_type": "DELIVERY",
+                        "rating": "3.6",
+                        "reviewCount": "20",
+                        "reviewTextSmall": "20 Reviews",
+                        "subtext": "20 Delivery Reviews",
+                        "color": "#E23744",
+                        "ratingV2": "3.6",
+                        "subtitle": "DELIVERY",
+                        "sideSubTitle": "Delivery Ratings",
+                        "bgColorV2": {
+                            "type": "green",
+                            "tint": "600"
+                        },
+                        "newOnDelivery": false
+                    }
+                }
+            },
+            "cft": {
+                "text": "₹2,800 for two"
+            },
+            "cfo": {
+                "text": "₹1,150 for one"
+            },
+            "locality": {
+                "name": "Middle Circle, Connaught Place, New Delhi",
+                "address": "H 55, 1st Floor, Outer Circle, Connaught Place, New Delhi",
+                "localityUrl": "ncr/restaurants/in/middle-circle-connaught-place"
+            },
+            "timing": {
+                "text": "",
+                "color": ""
+            },
+            "cuisine": [
+                {
+                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNTBcIl19Il0%3D",
+                    "url": "https://www.zomato.com/ncr/restaurants/north-indian/",
+                    "name": "North Indian"
+                },
+                {
+                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMjVcIl19Il0%3D",
+                    "url": "https://www.zomato.com/ncr/restaurants/chinese/",
+                    "name": "Chinese"
+                },
+                {
+                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiM1wiXX0iXQ%3D%3D",
+                    "url": "https://www.zomato.com/ncr/restaurants/asian/",
+                    "name": "Asian"
+                },
+                {
+                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNTVcIl19Il0%3D",
+                    "url": "https://www.zomato.com/ncr/restaurants/italian/",
+                    "name": "Italian"
+                },
+                {
+                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNzVcIl19Il0%3D",
+                    "url": "https://www.zomato.com/ncr/restaurants/mughlai/",
+                    "name": "Mughlai"
+                },
+                {
+                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMTAwXCJdfSJd",
+                    "url": "https://www.zomato.com/ncr/restaurants/desserts/",
+                    "name": "Desserts"
+                },
+                {
+                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMTYzXCJdfSJd",
+                    "url": "https://www.zomato.com/ncr/restaurants/tea/",
+                    "name": "Tea"
+                },
+                {
+                    "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMjcwXCJdfSJd",
+                    "url": "https://www.zomato.com/ncr/restaurants/beverages/",
+                    "name": "Beverages"
+                }
+            ],
+            "should_ban_ugc": false,
+            "costText": {
+                "text": "₹2,800 for two"
+            }
         },
+        "order": [],
+        "gold": {
+            "instant": 25,
+            "welcome_offer": false,
+            "gold_offer": true,
+            "text": "Flat",
+            "offerValue": "25% OFF",
+            "isGoldIcon": true
+        },
+        "takeaway": [],
+        "cardAction": {
+            "text": "",
+            "clickUrl": "/TheDarziBar/info",
+            "clickActionDeeplink": ""
+        },
+        "distance": "1.4 km",
+        "isPromoted": true,
+        "promotedText": "Promoted",
+        "trackingData": [
+            {
+                "table_name": "jadtracking",
+                "payload": "{\"banner_id\":\"4201379\",\"bzone\":\"0\",\"campaign_id\":\"13110243\",\"category_id\":\"1\",\"location_type\":\"city\",\"location_id\":\"1\",\"display_page\":\"dineout_home\",\"entity_type\":\"RESTAURANT\",\"entity_id\":\"18423151\",\"isNewAd\":\"34\",\"ad_position\":\"11\",\"slider_position\":\"11\",\"slider_sequence\":\"11\",\"creative_id\":\"0\",\"collection_id\":\"0\",\"data\":\"{\\\"type\\\":\\\"boost\\\",\\\"original_rank\\\":163,\\\"boosted_rank\\\":11,\\\"ordering_parameter_value\\\":{\\\"ads_ctr\\\":\\\"0\\\",\\\"cost_per_unit\\\":\\\"23.6\\\",\\\"distance\\\":\\\"1.1628236770629883\\\",\\\"organic_ctr\\\":\\\"0\\\",\\\"popularity_score\\\":\\\"0\\\",\\\"target_left\\\":\\\"258\\\"},\\\"search_id\\\":\\\"7ddb6673-1e74-46b3-92bf-b48614c0f612\\\",\\\"section_name\\\":\\\"more\\\",\\\"total_score\\\":0.33231928251091547}\",\"subzone_id\":\"0\"}",
+                "event_names": {
+                    "tap": "{\"action\":\"click\"}",
+                    "impression": "{\"action\":\"impression\"}",
+                    "served": "{\"action\":\"serve\"}"
+                }
+            },
+            {
+                "table_name": "zsearch_events_log",
+                "payload": "{\"search_id\":\"7ddb6673-1e74-46b3-92bf-b48614c0f612\",\"location_type\":\"delivery_cell\",\"location_id\":\"4110939063815503872\",\"page_type\":\"nightlife\",\"app_type\":\"new_web_consumer\",\"section\":\"restaurants\",\"entity_type\":\"restaurant\",\"entity_id\":\"18423151\",\"element_type\":\"listing\",\"rank\":11,\"metadata\":{\"is_ad\":\"true\"}}",
+                "event_names": {
+                    "tap": "{\"action\":\"tap\"}",
+                    "impression": "{\"action\":\"impression\"}"
+                }
+            }
+        ],
+        "allCTA": [
+            {
+                "type": "booking_cta",
+                "text": "Book a Table",
+                "clickUrl": "/TheDarziBar/book"
+            }
+        ],
+        "promoOffer": "",
+        "checkBulkOffers": false,
+        "bulkOffers": [],
+        "isDisabled": false,
+        "bottomContainers": []
+    },
         {
             "type": "restaurant",
             "info": {
