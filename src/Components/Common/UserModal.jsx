@@ -68,7 +68,7 @@ function UserModal({ config, close, setOne }) {
             {
                 config === 2 &&
                 <div onClick={handleBackgroundClick} className='fixed top-0  w-full h-full z-50 bg-[rgba(28,28,28,0.97)] flex justify-center items-center'>
-                    <div onClick={(e) => e.stopPropagation()} className='h-[80%] w-[35%] bg-white  z-50 rounded-lg'>
+                    <div onClick={(e) => e.stopPropagation()} className='h-full w-full md:h-[80%] md:w-[35%] bg-white  z-50 rounded-lg'>
 
                         <div className='w-[90%] justify-center items-center mx-auto h-full'>
                             <div className='flex justify-between items-center'>
