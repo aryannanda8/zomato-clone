@@ -11,6 +11,14 @@ function Header() {
     const handleRegister = () => {
         setRegister(!register);
     }
+   
+
+    const scrollToGetApp = () => {
+        const element = document.getElementById('getApp');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
     return (
         <div>
             < div className="bg-custom-image bg-cover bg-center  h-custom flex flex-col gap-y-16  flex-nowrap  items-center  text-white" >
@@ -18,13 +26,14 @@ function Header() {
                 <nav className=' p-5 text-lg max-width font-light' style={{ width: "100%" }}>
                     <ul className="flex w-full justify-between items-center">
                         <div>
-                            <li className=' text-sm font-[500] cursor-pointer' >Get the app</li>
+                            {/* <li className=' text-sm font-[500] cursor-pointer' onClick={() => { window.scrollTo({ top: 1310, behavior: "smooth" }); console.log('hello');  }} >Get the app</li> */}
+                            <li className=' text-sm font-[500] cursor-pointer' onClick={scrollToGetApp} >Get the app</li>
 
                         </div>
                         <div className='flex justify-between gap-4 md:gap-10 font-[300]'>
 
-                            <li className='hidden md:block cursor-pointer'>Investor Relations</li>
-                            <li className='hidden md:block cursor-pointer'>Add restaurant</li>
+                            {/* <li className='hidden md:block cursor-pointer'>Investor Relations</li> */}
+                            {/* <li className='hidden md:block cursor-pointer'>Add restaurant</li> */}
                             <li className='cursor-pointer' onClick={handleLogin}>Log in</li>
                             <li className='cursor-pointer' onClick={handleRegister}>Sign up</li>
                         </div>

@@ -18,8 +18,10 @@ function ExploreCard({ restaurant, type }) {
     const locality = type === 'dining' ? restaurant?.info?.locality?.name : null;
     const distance = type === 'dining' ? restaurant?.distance : null;
     const cardAction = restaurant?.cardAction?.clickUrl;
+    const ratingColor = restaurant?.info?.rating?.rating_color ?? "green";
 
     const handleClick = () => {
+        scrollTo({top:0, })
         navigate(cardAction, {state:{restaurant}})
     }
     return (
@@ -68,7 +70,7 @@ function ExploreCard({ restaurant, type }) {
                         {name}
                     </div>
 
-                    <div className="flex items-center py-[1px] text-white px-[5px] rounded-[5px] text-center content " style={{ background: "green" }}>
+                    <div className="flex items-center py-[1px] text-white px-[5px] rounded-[5px] text-center content " style={{ backgroundColor: `#${ratingColor}` }}>
 
                         <p className='mr-[2px] mb-[0.5px]  text-[12px] font-[700] flex items-center text-center'>{rating}</p>
                         <div>

@@ -65,10 +65,13 @@ function IndividualRestaurant({ setVisible }) {
                     <h2 className="text-xl font-semibold mb-2">Ratings & Offers</h2>
                     <div className="flex items-center mb-1">
                         <span
-                            className="text-white px-2 py-1 rounded mr-2"
+                            className="text-white px-2 py-1 rounded-lg mr-3"
                             style={{ backgroundColor: `#${ratingColor}` }}
                         >
-                            {rating} <FaStar className="inline" />
+                            <div className='flex items-center gap-1'>
+                                {rating} <FaStar className="inline" />
+
+                            </div>
                         </span>
                         <span>({votes} reviews)</span>
                     </div>

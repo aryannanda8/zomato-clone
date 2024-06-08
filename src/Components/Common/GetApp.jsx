@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const GetApp = () => {
   const [inputType, setInputType] = useState(true);
   return (
-    <div className="  bg-[#FFFBF7] flex justify-center items-center h-[] md:h-[] mt-20  w-full mb-20 py-11">
+    <div id="getApp" className="bg-[#FFFBF7] flex justify-center items-center h-[] md:h-[] mt-20  w-full mb-20 py-11">
       <div className="innerContainer w-[100%] md:w-[70%] flex justify-center  h-[80%]">
         <div className="leftSide hidden md:flex items-center ">
           <img
@@ -61,14 +61,14 @@ const GetApp = () => {
                   <input
                     type="tel"
                     placeholder="Number"
-                    class="pt-3 pb-3 pr-4 pl-4 border-2 w-[18rem] h-[3.5rem] border-red-500 rounded font-[350] text-[1rem]  focus:outline-none"
+                    className="pt-3 pb-3 pr-4 pl-4 border-2 w-[18rem] h-[3.5rem] border-red-500 rounded font-[350] text-[1rem]  focus:outline-none"
                   />
 
                 )}
               </div>
               <button
                 variant="default"
-                class="bg-red-500  pb2 pl-4 pr-4 w-[18rem] md:w-[10rem] h-[3.5rem] text-white text-[1rem] font-[500] cursor-pointer hover:bg-red-600 text-center"
+                className="bg-red-500  pb2 pl-4 pr-4 w-[18rem] md:w-[10rem] h-[3.5rem] text-white text-[1rem] font-[500] cursor-pointer hover:bg-red-600 text-center"
               >
                 Share App Link
               </button>

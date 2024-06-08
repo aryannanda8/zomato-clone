@@ -2,7 +2,6 @@ import React from 'react'
 import Collections from '../Common/Collections'
 import Localities from '../Common/Localities'
 import GetApp from '../Common/GetApp'
-import ExploreOptions from '../Common/ExploreOptions'
 import Footer from '../Common/Footer/Footer'
 
 import orderOnlineImage from '/images/orderonline.jpg'

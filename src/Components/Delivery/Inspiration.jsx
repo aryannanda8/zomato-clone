@@ -36,8 +36,8 @@ function Inspiration() {
     }
     return (
         <div className='bg-grayBg py-[40px] w-full'>
-            <div class="max-width">
-                <div class="collection-title">
+            <div className="max-width">
+                <div className="collection-title">
                     Inspiration for your first order
                 </div>
             </div>

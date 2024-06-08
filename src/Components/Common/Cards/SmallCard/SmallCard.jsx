@@ -4,7 +4,7 @@ function SmallCard({ imgSrc, text, text2, link }) {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: "smooth"
+            // behavior: "smooth"
         });
     }
     return (

@@ -1,25 +1,15 @@
-import React, { useContext, useState } from 'react'
-import Header from './Components/Header/Header'
-import Home from './Components/Home/Home'
-import { Link, Routes, Route } from 'react-router-dom'
-import HomeMain from './Components/Home/HomeMain'
-import Delivery from './Components/Delivery/Delivery'
-import Collections from './Components/Common/Collections'
-import DiningOut from './Components/DiningOut/DiningOut'
-import Nightlife from './Components/NightLife/Nightlife'
-import NcrRoutes from './Routes/NcrRoutes'
-import HeaderMain from './Components/Header/HeaderMain'
-import LoadingBar from './Components/Common/LoadingBar'
-import ScrollToTop from './Components/Common/Scroll/ScrollToTop'
-
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import RouteLoader from './Components/RouteLoader';
+import Home from './Components/Home/Home';
+import NcrRoutes from './Routes/NcrRoutes';
 
 function App() {
-  const [activeTab, setActiveTab] = useState("Delivery")
-  // const defaul = useContext()
-  // console.log(defaul);
+  const [activeTab, setActiveTab] = useState("Delivery");
+
   return (
     <div style={{ font: "Nunito" }}>
-
+      <RouteLoader />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/ncr/*' element={<NcrRoutes setActiveTab={setActiveTab} activeTab={activeTab} />} />
@@ -28,4 +18,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

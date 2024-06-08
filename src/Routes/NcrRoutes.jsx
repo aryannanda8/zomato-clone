@@ -11,7 +11,7 @@ function NcrRoutes({ setActiveTab , activeTab}) {
     let[visible, setVisible] = useState(true)
     return (
         <div>
-            <LoadingBar/>
+            {/* <LoadingBar/> */}
             
             <HomeMain activeTab={activeTab} visible={visible} />
             <Routes>
