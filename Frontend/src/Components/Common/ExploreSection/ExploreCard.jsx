@@ -4,25 +4,24 @@ import { useNavigate } from 'react-router-dom';
 
 function ExploreCard({ restaurant, type }) {
     let navigate = useNavigate();
-
-
-    const name = restaurant?.info?.name ?? "";
-    const coverImg = restaurant?.info?.image?.url;
-    const deliveryTime = type === 'dining' ? null : restaurant?.order?.deliveryTime;
-    const rating = restaurant?.info?.rating?.rating_text;
-    const approxPrize = type === 'delivery' ? restaurant?.info?.cfo?.text : restaurant?.info?.cft?.text;
-
-    const cuisines = restaurant?.info?.cuisine?.map(item => item.name);
-    const bottomContainers = restaurant?.bottomContainers;
-    const goldOff = restaurant?.gold == '' ? null : restaurant?.gold?.offerValue
-    const locality = type === 'dining' ? restaurant?.info?.locality?.name : null;
-    const distance = type === 'dining' ? restaurant?.distance : null;
-    const cardAction = restaurant?.cardAction?.clickUrl;
-    const ratingColor = restaurant?.info?.rating?.rating_color ?? "green";
+    
+    const name = restaurant?.name ?? "";
+    const coverImg = restaurant?.image ?? "";
+    const deliveryTime = restaurant?.type === 'dining' ? null : restaurant?.deliveryTime;
+    const avgRating = restaurant?.avgRating ;
+    const approxPrize = restaurant?.approxPrice ?? "";
+    const cuisines = restaurant?.cuisines?.map(item => item.name) ?? [];
+    const bottomContainers = restaurant?.bottomContainers ?? [];
+    const goldOff = restaurant?.goldOff ?? null;
+    const locality = restaurant?.type === 'dining' ? restaurant?.locality ?? null : null;
+    const distance = restaurant?.type === 'dining' ? restaurant?.distance ?? null : null;
+    const cardAction = restaurant?.cardAction ?? "";
+    const ratingColor = restaurant?.rating?.rating_color ?? "green";
+    
 
     const handleClick = () => {
         scrollTo({ top: 0, })
-        navigate(cardAction, { state: { restaurant } })
+        navigate(cardAction, { state: { restaurantId: restaurant._id } })
     }
     return (
         <div className='w-full lg:max-w-[340px] h-fit  rounded-[17px] cursor-pointer overflow-hidden border border-transparent hover:border-gray-300 hover:shadow-customShadow transition duration-400 ease-in-out relative' onClick={handleClick}>
@@ -71,9 +70,9 @@ function ExploreCard({ restaurant, type }) {
                         {name}
                     </div>
 
-                    <div className="flex items-center py-[1px] text-white px-[5px] rounded-[5px] text-center content " style={{ backgroundColor: `#${ratingColor}` }}>
+                    <div className="flex items-center py-[1px] text-white px-[5px] rounded-[5px] text-center content " style={{ backgroundColor: 'green' }}>
 
-                        <p className='mr-[2px] mb-[0.5px]  text-[12px] font-[700] flex items-center text-center'>{rating}</p>
+                        <p className='mr-[2px] mb-[0.5px]  text-[12px] font-[700] flex items-center text-center'>{avgRating}</p>
                         <div>
                             <FaStar size={10} />
 
@@ -84,7 +83,7 @@ function ExploreCard({ restaurant, type }) {
                     <div className='' style={{ maxWidth: '180px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
 
                         {/* {restaurant.info.cuisine[0].name}{restaurant.info.cuisine[1] ? "," : ""} {restaurant.info.cuisine[1] ? restaurant.info.cuisine[1].name : ""} */}
-                        {cuisines.length && cuisines.map((item, index) => {
+                        {cuisines && cuisines.length && cuisines.map((item, index) => {
                             return <span key={index} >{item}{index !== cuisines.length - 1 && ", "}</span>
                         })}
 

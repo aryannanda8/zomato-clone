@@ -8,28 +8,32 @@ import TopBrands from './TopBrands';
 import ExploreSection from '../Common/ExploreSection/ExploreSection';
 import restaurants from '../../data/restaurants';
 function Delivery({ setActiveTab, activeTab, setVisible }) {
-  setVisible(true)
   useEffect(() => {
-    
+    setVisible(true)
+
     setActiveTab('Delivery')
-    
-   
+
+
   }, [])
   const deliveryFilters = [
     {
 
       title: "Filters",
       icon: <PiSlidersHorizontalLight size={20} />,
+      icls: ''
     },
     {
       title: "Rating: 4.0+",
+      cls: 'four'
     },
     {
       title: "Pure Veg",
+      cls: ''
     },
     {
       title: "Cuisines",
       icon: <FaAngleDown size={15} />,
+      cls: ''
     },
   ]
   return (

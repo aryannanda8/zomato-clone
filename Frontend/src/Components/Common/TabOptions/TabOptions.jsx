@@ -44,7 +44,7 @@ function TabOptions({ activeTab }) {
           WebkitOverflowScrolling: 'touch', /* for momentum scrolling in iOS Safari */
           scrollbarWidth: 'none', /* for Firefox */
           msOverflowStyle: 'none', /* for Internet Explorer and Edge */
-          '&::-webkit-scrollbar': {
+          '&::WebkitScrollbar?': {
             display: 'none', /* for Chrome, Safari, and Opera */
           },
         }}>

@@ -11,24 +11,27 @@ const nightLifeFilters = [
 
     title: "Filters",
     icon: <PiSlidersHorizontalLight size={20} />,
+    cls: ''
   },
   {
     img: "https://b.zmtcdn.com/data/o2_assets/577bf55ff265ae45e11cfe6911d176941687789024.png",
     title: "Gold",
+    cls: ''
   },
   {
     title: "Rating: 4.0+",
+    cls: 'four'
   },
 
   {
     title: "Pubs & Bars",
-
+cls:''
   },
 ]
 function Nightlife({ setActiveTab, activeTab, setVisible }) {
-  setVisible(true)
   useEffect(() => {
     
+    setVisible(true)
     setActiveTab('Nightlife')
 
   }, [])

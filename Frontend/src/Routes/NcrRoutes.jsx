@@ -6,7 +6,7 @@ import Nightlife from '../Components/NightLife/Nightlife'
 import { Link, Routes, Route } from 'react-router-dom'
 import LoadingBar from '../Components/Common/LoadingBar'
 
-import IndividualRestaurant from '../Components/IndividualRestaurant'
+import IndividualRestaurant from '../Components/IndividualRestaurants/IndividualRestaurant'
 function NcrRoutes({ setActiveTab , activeTab}) {
     let[visible, setVisible] = useState(true)
     return (

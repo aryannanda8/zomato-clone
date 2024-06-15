@@ -13,37 +13,46 @@ const diningFilters = [
 
     title: "Filters",
     icon: <PiSlidersHorizontalLight size={20} />,
+    cls:''
   },
   {
     img: "https://b.zmtcdn.com/data/o2_assets/577bf55ff265ae45e11cfe6911d176941687789024.png",
     title: "Gold",
+        cls:''
+
   },
   {
     title: "Rating: 4.0+",
+    cls:'four'
+
   },
   {
     title: "Outdoor Seating",
+    cls:''
+
   },
   {
-    title: "Serves Alcohol",
+    title: "Serves Alcohol",    cls:''
+
 
   },
   {
     title: "Open Now",
+    cls:''
 
   },
 ]
-function DiningOut({ setActiveTab, activeTab , setVisible}) {
-  setVisible(true)
+function DiningOut({ setActiveTab, activeTab, setVisible }) {
   useEffect(() => {
-    
-        setActiveTab('Dining Out')
-  
-  }, [])           
-  
+
+    setVisible(true)
+    setActiveTab('Dining Out')
+
+  }, [])
+
   return (
-    <div> 
-      
+    <div>
+
       <Collections />
       <Filters filterList={diningFilters} />
       <GoldDiscount />

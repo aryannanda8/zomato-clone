@@ -3,25 +3,35 @@ const mongoose = require('mongoose')
 const seedDb = require('./seed')
 const app = express();
 const restaurantRoutes = require('./apis/restaurantRoutes')
+const reviewRoutes = require('./apis/reviewRoutes')
+const cors = require('cors');
+app.use(cors());
+require('dotenv').config();
 
-mongoose.connect('mongodb://127.0.0.1:27017/Zomato')
-    .then(() => {
-        console.log('db connected successfully');
-    })
-    .catch((e) => {
-        console.log('error in connecting db', e);
-    })
+
+const uri = process.env.MONGODB_URI;
+mongoose.connect(uri)
+    .then(() => console.log('DB Connected'))
+    .catch((err) => console.log(err));
+
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.get('/', (req, res) => {
+    console.log('root route hit');
     res.send('hello')
 })
 
-// seedDb();
+
+// seedDb();  
 
 app.use(restaurantRoutes);
+app.use(reviewRoutes);
 
-const port = 8000;
+
+const port = process.env.PORT || 8080;
 
 app.listen(port, () => {
-    console.log(`server started at port: ${port}`);
-})
+    console.log(`server running at port ${port} version 5`);
+});
