@@ -8,7 +8,7 @@ function GetRestaurants({ list, type, filter, setFilter }) {
 
         // console.log('making a request');
         // console.log(filter, 'ye hai bhai filter');
-        let res = (filter === 4.0) ? await axios.get('http://localhost:8000/restaurants/filterByRating?minRating=4&maxRating=5') : await axios.get('http://localhost:8000/restaurants')
+        let res = (filter === 4.0) ? await axios.get('https://zomato-clone-server.vercel.app/restaurants/filterByRating?minRating=4&maxRating=5') : await axios.get('https://zomato-clone-server.vercel.app/restaurants')
 
         // console.log(res, 'hello');
         // console.log(res.data, 'res.data');

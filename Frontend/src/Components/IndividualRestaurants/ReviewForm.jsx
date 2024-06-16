@@ -12,7 +12,7 @@ const ReviewForm = ({ restaurantId, onNewReview }) => {
         const data = { rating, comment };
 
         try {
-            const res = await axios.post(`http://localhost:8000/restaurants/${restaurantId}/review`, data);
+            const res = await axios.post(`https://zomato-clone-server.vercel.app/restaurants/${restaurantId}/review`, data);
             // console.log(res);
             onNewReview(res.data.review);
             setRating(0);
