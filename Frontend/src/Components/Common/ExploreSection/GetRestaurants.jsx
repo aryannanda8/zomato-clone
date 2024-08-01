@@ -21,9 +21,10 @@ function GetRestaurants({ list, type }) {
         setLoading(true);
         try {
             // const response = await axios.get('http://localhost:8000/restaurants', {
-            const response = await axios.get('https://zomato-clone-server.vercel.app', {
+            const response = await axios.get('https://zomato-clone-server.vercel.app/restaurants', {
                 params: new URLSearchParams(location.search)
             });
+            console.log('API Response:', response.data); // Log the response
             setRestList(response.data);
         } catch (error) {
             console.error('Error fetching restaurants:', error);
@@ -38,9 +39,9 @@ function GetRestaurants({ list, type }) {
         <>
             {loading
                 ? Array(10).fill().map((_, index) => <PlaceholderCard key={index} />)
-                : restList && restList.length ? restList.map((item, index) => (
+                : restList && restList.length ? restList.map((item, index) => 
                     <ExploreCard restaurant={item} key={index} type={type} />
-                ))
+                )
                     : <div className='ml-0'>Sorry, no restaurants to display</div>
             }
         </>
