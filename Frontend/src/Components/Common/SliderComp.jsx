@@ -3,8 +3,10 @@ import SliderItem from './SliderItem';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import SliderItem2 from './SliderItem2';
 import SliderItem3 from './SliderItem3';
+import useFilters from '../../hooks/useFilters';
 
-function SliderComp({ arr, config, itemsToShow }) {
+function SliderComp({ handleFilterChange='', arr, config, itemsToShow }) {
+    // const { appliedFilters, handleFilterChange } = useFilters();
     const [startIndex, setStartIndex] = useState(0);
     const [canRight, setCanRight] = useState(arr.length > itemsToShow);
     const [canLeft, setCanLeft] = useState(false);
@@ -39,7 +41,8 @@ function SliderComp({ arr, config, itemsToShow }) {
                 <div className='relative mx-auto overflow-hidden'>
                     <div className='flex transition-transform duration-700 ease-in-out' style={{ width: `${arr.length * itemWidth}px`, transform: `translateX(-${startIndex * itemWidth}px)` }}>
                         {arr.map((item, index) => (
-                            config === 1 ? <SliderItem item={item} key={index} /> :
+                            config === 1 ? <div onClick={()=>handleFilterChange({ filterType: 'cuisines', title: item.title, cuisineVal: item.title })} key={index}><SliderItem item={item} key={index} /></div> :
+                            // config === 1 ? <SliderItem item={item} key={index} /> :
                             config === 2 ? <SliderItem2 item={item} key={index} /> :
                             <SliderItem3 item={item} key={index} />
                         ))}

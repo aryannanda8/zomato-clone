@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Restaurant = require('./models/restaurant');
-const Cuisine = require('./models/cuisine');
+// const cuisines = require('./models/cuisines');
 
 let dummyRestaurants = [
   {
@@ -8,13 +8,14 @@ let dummyRestaurants = [
     image: "https://b.zmtcdn.com/data/pictures/chains/1/171/3750aac8d138fbee606579cf54412b88_o2_featured_v2.jpg",
     deliveryTime: "24 min",
     approxPrice: "₹100 for one",
-    cuisine: [
+    cuisines: [
       { url: "https://www.zomato.com/ncr/restaurants/burger/", name: "Burger" },
       { url: "https://www.zomato.com/ncr/restaurants/wraps/", name: "Wraps" },
       { url: "https://www.zomato.com/ncr/restaurants/fast-food/", name: "Fast Food" },
       { url: "https://www.zomato.com/ncr/restaurants/beverages/", name: "Beverages" }
     ],
     type: "delivery",
+    pureVeg: false,
     locality: "Janpath, New Delhi",
     distance: "1.2 km",
     cardAction: "/ncr/mcdonalds-1-janpath-new-delhi/order"
@@ -26,7 +27,7 @@ let dummyRestaurants = [
     deliveryTime: "36 min",
 
     approxPrice: "₹100 for one",
-    cuisine: [
+    cuisines: [
       { url: "https://www.zomato.com/ncr/restaurants/north-indian/", name: "North Indian" },
       { url: "https://www.zomato.com/ncr/restaurants/chinese/", name: "Chinese" },
       { url: "https://www.zomato.com/ncr/restaurants/south-indian/", name: "South Indian" },
@@ -48,7 +49,7 @@ let dummyRestaurants = [
     deliveryTime: "26 min",
 
     approxPrice: "₹100 for one",
-    cuisine: [
+    cuisines: [
       { url: "https://www.zomato.com/ncr/restaurants/burger/", name: "Burger" },
       { url: "https://www.zomato.com/ncr/restaurants/fast-food/", name: "Fast Food" },
       { url: "https://www.zomato.com/ncr/restaurants/momos/", name: "Momos" },
@@ -65,6 +66,7 @@ let dummyRestaurants = [
       }
     ],
     type: "delivery",
+    pureVeg: false,
     locality: "H-45, Connaught Place, New Delhi",
     distance: "1.2 km",
     cardAction: "/ncr/burger-singh-big-punjabi-burgers-connaught-place-new-delhi/order"
@@ -75,7 +77,7 @@ let dummyRestaurants = [
     deliveryTime: "42 min",
 
     approxPrice: "₹100 for one",
-    cuisine: [
+    cuisines: [
       { url: "https://www.zomato.com/ncr/restaurants/north-indian/", name: "North Indian" },
       { url: "https://www.zomato.com/ncr/restaurants/rolls/", name: "Rolls" },
       { url: "https://www.zomato.com/ncr/restaurants/momos/", name: "Momos" },
@@ -94,6 +96,7 @@ let dummyRestaurants = [
         text: "Follows all Max Safety measures to ensure your food is safe"
       }
     ],
+    
     type: "delivery",
     locality: "Shop 89, Flyover Market, Defence Colony, New Delhi",
     distance: "6 km",
@@ -106,7 +109,7 @@ let dummyRestaurants = [
     deliveryTime: "30 min",
 
     approxPrice: "₹100 for one",
-    cuisine: [
+    cuisines: [
       { url: "https://www.zomato.com/ncr/restaurants/burger/", name: "Burger" },
       { url: "https://www.zomato.com/ncr/restaurants/fast-food/", name: "Fast Food" },
       { url: "https://www.zomato.com/ncr/restaurants/american/", name: "American" }
@@ -123,6 +126,8 @@ let dummyRestaurants = [
     ],
     locality: "Rajendra Place, New Delhi",
     distance: "3.7 km",
+    openNow: false,
+    
     cardAction: "/ncr/wendys-burgers-rajendra-place-new-delhi/order"
   },
   {
@@ -131,7 +136,7 @@ let dummyRestaurants = [
     deliveryTime: "33 min",
 
     approxPrice: "₹100 for one",
-    cuisine: [
+    cuisines: [
       { url: "https://www.zomato.com/ncr/restaurants/ice-cream/", name: "Ice Cream" },
       { url: "https://www.zomato.com/ncr/restaurants/desserts/", name: "Desserts" }
     ],
@@ -139,6 +144,8 @@ let dummyRestaurants = [
     bottomContainers: [],
     locality: "Karol Bagh, New Delhi",
     distance: "4.1 km",
+
+    openNow: false,
     cardAction: "/ncr/kwality-walls-frozen-dessert-and-ice-cream-shop-karol-bagh-new-delhi/order"
   },
   {
@@ -147,7 +154,7 @@ let dummyRestaurants = [
     deliveryTime: "46 min",
 
     approxPrice: "₹300 for two",
-    cuisine: [
+    cuisines: [
       { url: "https://www.zomato.com/ncr/restaurants/pizza/", name: "Pizza" },
       { url: "https://www.zomato.com/ncr/restaurants/fast-food/", name: "Fast Food" },
       { url: "https://www.zomato.com/ncr/restaurants/shake/", name: "Shake" }
@@ -163,6 +170,7 @@ let dummyRestaurants = [
       }
     ],
     goldOff: null,
+    pureVeg: false,
     locality: "Geeta Colony, New Delhi",
     distance: "6.8 km",
     cardAction: "/ncr/the-pizza-kings-geeta-colony-new-delhi/order"
@@ -173,8 +181,9 @@ let dummyRestaurants = [
     deliveryTime: "20 min",
 
     approxPrice: "₹700 for two",
-    cuisine: [
+    cuisines: [
       { url: "https://www.zomato.com/ncr/restaurants/biryani/", name: "Biryani" },
+      { url: "https://www.zomato.com/ncr/restaurants/biryani/", name: "Chicken" },
       { url: "https://www.zomato.com/ncr/restaurants/hyderabadi/", name: "Hyderabadi" },
       { url: "https://www.zomato.com/ncr/restaurants/andhra/", name: "Andhra" },
       { url: "https://www.zomato.com/ncr/restaurants/north-indian/", name: "North Indian" },
@@ -191,17 +200,18 @@ let dummyRestaurants = [
       }
     ],
     goldOff: null,
+    pureVeg:false,
     locality: "Connaught Place, New Delhi",
     distance: "854 m",
     cardAction: "/ncr/bikkgane-biryani-connaught-place-new-delhi/order"
   },
   {
-    name: "Khadak Singh Da Dhaba",
-    image: "https://b.zmtcdn.com/data/pictures/chains/6/18704536/4925df0169254d36473f3557c47c4257_o2_featured_v2.jpg",
+    name: "KFC",
+    image: "https://b.zmtcdn.com/data/pictures/chains/1/931/e513eb27ba3c7b7cbbeb8898286499ed_o2_featured_v2.jpg",
     deliveryTime: "39 min",
 
-    approxPrice: "₹100 for one",
-    cuisine: [
+    approxPrice: "₹300 for one",
+    cuisines: [
       {
         url: "https://www.zomato.com/ncr/restaurants/north-indian/",
         name: "North Indian"
@@ -216,7 +226,7 @@ let dummyRestaurants = [
       },
       {
         url: "https://www.zomato.com/ncr/restaurants/chinese/",
-        name: "Chinese"
+        name: "Chicken"
       },
       {
         url: "https://www.zomato.com/ncr/restaurants/biryani/",
@@ -228,15 +238,16 @@ let dummyRestaurants = [
       },
       {
         url: "https://www.zomato.com/ncr/restaurants/momos/",
-        name: "Momos"
+        name: "Chicken"
       }
     ],
     type: "delivery",
+    openNow: true,
     bottomContainers: [],
     goldOff: null,
-    locality: "Defence Colony, New Delhi",
+    locality: "Meera Bagh, New Delhi",
     distance: "6 km",
-    cardAction: "/ncr/khadak-singh-da-dhaba-defence-colony-new-delhi/order"
+    cardAction: "/ncr/kfc/order"
   },
   {
     name: "Bikanervala",
@@ -244,7 +255,7 @@ let dummyRestaurants = [
     deliveryTime: "22 min",
 
     approxPrice: "₹100 for one",
-    cuisine: [
+    cuisines: [
       {
         url: "https://www.zomato.com/ncr/restaurants/mithai/",
         name: "Mithai"
@@ -299,7 +310,7 @@ let dummyRestaurants = [
     deliveryTime: "20 min",
 
     approxPrice: "₹250 for one",
-    cuisine: [
+    cuisines: [
       {
         url: "https://www.zomato.com/ncr/restaurants/biryani/",
         name: "Biryani"
@@ -324,6 +335,7 @@ let dummyRestaurants = [
       }
     ],
     goldOff: null,
+    pureVeg:false,
     locality: "Connaught Place, New Delhi",
     distance: "1.1 km",
     cardAction: "/ncr/biryani-blues-connaught-place-new-delhi/order"
@@ -334,7 +346,7 @@ let dummyRestaurants = [
     deliveryTime: "57 min",
 
     approxPrice: "₹450 for two",
-    cuisine: [
+    cuisines: [
       {
         url: "",
         name: ""
@@ -353,7 +365,7 @@ let dummyRestaurants = [
     deliveryTime: "22 min",
 
     approxPrice: "₹400 for two",
-    cuisine: [
+    cuisines: [
       {
 
         "url": "https://www.zomato.com/ncr/restaurants/health-food/",
@@ -387,6 +399,8 @@ let dummyRestaurants = [
     type: "delivery",
     bottomContainers: [],
     goldOff: null,
+    pureVeg: false,
+    pureVeg: false,
     locality: "Paharganj, New Delhi",
     distance: "1.5 km",
     cardAction: "/ncr/subway-paharganj-new-delhi/order"
@@ -395,26 +409,35 @@ let dummyRestaurants = [
 
 ]
 
+// async function seedDb() {
+//   try {
+    
+//     await Restaurant.deleteMany({});
+
+//     // const cuisiness = await cuisines.insertMany(dummyRestaurants.flatMap((restaurant => restaurant.cuisines))) //saare cuisiness ko ek hi arr me daalna, and then cuisines collection me daalna
+//     // console.log('db seeded');
+
+//     //now i want to insert the restaurnts, and with each of them, the cuisines id that belongs to them
+//     const restaurants = await Restaurant.insertMany(dummyRestaurants);
+
+//     console.log('db seeded')
+
+//   }
+//   catch(error) {
+//     console.error('Database seeding error:', error);
+//   }
+// };
+
 async function seedDb() {
   try {
-    await Cuisine.deleteMany({});
     await Restaurant.deleteMany({});
-
-    const cuisines = await Cuisine.insertMany(dummyRestaurants.flatMap((restaurant => restaurant.cuisine))) //saare cuisines ko ek hi arr me daalna, and then cuisine collection me daalna
+    const restaurants = await Restaurant.insertMany(dummyRestaurants);
     console.log('db seeded');
-
-    //now i want to insert the restaurnts, and with each of them, the cuisine id that belongs to them
-    const restaurants = await Restaurant.insertMany(dummyRestaurants.map(restaurant => {
-      return {
-        ...restaurant, cuisines: restaurant.cuisine.map((c) => cuisines.find(cuisine=>cuisine.name === c.name)._id)
-      };
-
-
-    }));
-
-  }
-  catch(error) {
+  } catch (error) {
     console.error('Database seeding error:', error);
   }
 };
+
+// module.exports = seedDb;
+
 module.exports = seedDb;

@@ -8,7 +8,8 @@ import LoadingBar from '../Components/Common/LoadingBar'
 
 import IndividualRestaurant from '../Components/IndividualRestaurants/IndividualRestaurant'
 function NcrRoutes({ setActiveTab , activeTab}) {
-    let[visible, setVisible] = useState(true)
+    let [visible, setVisible] = useState(true)
+    // let [isFilterApplied, setIsFilterApplied] = useState(false);
     return (
         <div>
             {/* <LoadingBar/> */}

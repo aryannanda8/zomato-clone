@@ -3,7 +3,11 @@ import ExploreCard from './ExploreCard'
 import GetRestaurants from './GetRestaurants'
 
 function ExploreSection({ list, headingTitle, type }) {
-    const [filter, setFilter] = useState();
+    const [filter, setFilter] = useState({
+        rating: { },
+        cuisine: '',
+        cost: { }
+    });
 
     useEffect(() => {
         // Find the element with the class name 'four'
@@ -17,8 +21,6 @@ function ExploreSection({ list, headingTitle, type }) {
 
             // Attach the click event listener
             element.addEventListener('click', handleClick);
-
-           
         }
     }, []); // Empty dependency array ensures this runs only once when the component mounts
 

@@ -20,20 +20,28 @@ function Delivery({ setActiveTab, activeTab, setVisible }) {
 
       title: "Filters",
       icon: <PiSlidersHorizontalLight size={20} />,
-      icls: ''
+      filterType: null,
     },
     {
-      title: "Rating: 4.0+",
-      cls: 'four'
+      title: "Rating 4.0+",
+      filterType: 'rating',
+      minRating: 4.0,
     },
     {
       title: "Pure Veg",
-      cls: ''
+      filterType: 'pure_veg'
     },
     {
-      title: "Cuisines",
-      icon: <FaAngleDown size={15} />,
-      cls: ''
+      title: "Pizza",
+      // icon: <FaAngleDown size={15} />,
+      filterType: 'cuisines',
+      cuisineVal: 'Pizza'
+    },
+    {
+      title: "Burger",
+      // icon: <FaAngleDown size={15} />,
+      filterType: 'cuisines',
+      cuisineVal: 'Burger'
     },
   ]
   return (

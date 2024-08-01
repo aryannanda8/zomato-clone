@@ -1,6 +1,7 @@
 import React from 'react'
 import SliderComp from '../Common/SliderComp'
 import useMediaQuery from './UseMediaQuery';
+import { useSelector } from 'react-redux';
 
 const brandList = [
     // {
@@ -40,7 +41,7 @@ const brandList = [
     {
         title: "Burger Singh",
         cover: "https://b.zmtcdn.com/data/brand_creatives/logos/a175a6938688350fb3da3018da6293db_1625244343.png",
-    time: '25 min',
+        time: '25 min',
     },
     // {
     //     title: "Dosa",
@@ -59,6 +60,8 @@ const brandList = [
 
 
 function TopBrands() {
+    const appliedFilters = useSelector((store) => store.filter.filters);
+
     const isMediumScreen = useMediaQuery('(max-width: 768px)');
     const isSmallScreen = useMediaQuery('(max-width: 480px)');
     const isExtraSmallScreen = useMediaQuery('(max-width: 640px)');
@@ -78,19 +81,23 @@ function TopBrands() {
         itemsToShow = 5;
     }
     return (
-        <div className=' py-[40px]'>
-            <div className='max-width '>
-                <div className='collection-title'>
-                    Top brands for you
-                    
+        <>
+            {appliedFilters.length ? <></> :
+                <div className=' py-[40px]'>
+                    <div className='max-width '>
+                        <div className='collection-title'>
+                            Top brands for you
 
+
+                        </div>
+
+                    </div>
+                    <div className='w-full  '>
+                        <SliderComp arr={brandList} config={2} itemsToShow={itemsToShow} />
+                    </div>
                 </div>
-
-            </div>
-            <div className='w-full  '>
-                <SliderComp arr={brandList} config={2} itemsToShow={itemsToShow} />
-            </div>
-        </div>
+            }
+        </>
     )
 }
 

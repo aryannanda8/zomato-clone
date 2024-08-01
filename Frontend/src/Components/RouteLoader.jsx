@@ -8,9 +8,12 @@ const RouteLoader = () => {
 
   useEffect(() => {
     setProgress(30);
-    const timer = setTimeout(() => setProgress(100), 500);
-    return () => clearTimeout(timer); // Clear timeout if the component unmounts
-  }, [location.pathname]);
+
+    // Simulate some loading time
+    const timer = setTimeout(() => setProgress(100), 500); // Adjust the timeout duration as needed
+
+    return () => clearTimeout(timer);
+  }, [location.pathname, location.search]);
 
   return (
     <LoadingBar

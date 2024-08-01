@@ -11,6 +11,7 @@ const useRestaurantData = (restaurantId) => {
         const fetchRestaurantData = async () => {
             try {
                 const res = await axios.get(`https://zomato-clone-server.vercel.app/restaurants/${restaurantId}`);
+                // const res = await axios.get(`http://localhost:8000/restaurants/${restaurantId}`);
                 setRestaurant(res.data);
                 setReviews(res.data.reviews);
             } catch (error) {

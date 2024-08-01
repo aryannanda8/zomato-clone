@@ -22,7 +22,7 @@ function Header() {
       };
     return (
         <div>
-            < div className="bg-custom-image bg-cover bg-center  h-custom flex flex-col gap-y-16  flex-nowrap  items-center  text-white" >
+            < div className="bg-custom-image bg-cover bg-center  h-custom flex flex-col gap-y-16  flex-nowrap  items-center  text-white " >
 
                 <nav className=' p-5 text-lg max-width font-light' style={{ width: "100%" }}>
                     <ul className="flex w-full justify-between items-center">

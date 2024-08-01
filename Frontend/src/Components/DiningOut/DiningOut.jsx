@@ -13,32 +13,35 @@ const diningFilters = [
 
     title: "Filters",
     icon: <PiSlidersHorizontalLight size={20} />,
-    cls:''
+    cls: '',
+    filterType: null,
   },
   {
     img: "https://b.zmtcdn.com/data/o2_assets/577bf55ff265ae45e11cfe6911d176941687789024.png",
     title: "Gold",
-        cls:''
+    filterType: 'gold'
 
   },
   {
     title: "Rating: 4.0+",
-    cls:'four'
+    filterType: 'rating',
+    minRating: 4.0,
 
   },
   {
     title: "Outdoor Seating",
-    cls:''
+
+    filterType: ''
 
   },
   {
-    title: "Serves Alcohol",    cls:''
-
-
+    title: "Serves Alcohol", 
+    filterType: 'alcohol'
   },
   {
     title: "Open Now",
-    cls:''
+    
+
 
   },
 ]

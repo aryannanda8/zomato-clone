@@ -10,7 +10,7 @@ function ExploreCard({ restaurant, type }) {
     const deliveryTime = restaurant?.type === 'dining' ? null : restaurant?.deliveryTime;
     const avgRating = restaurant?.avgRating ;
     const approxPrize = restaurant?.approxPrice ?? "";
-    const cuisines = restaurant?.cuisines?.map(item => item.name) ?? [];
+    const cuisines = restaurant?.cuisines?.map(item => item.name) ?? null;
     const bottomContainers = restaurant?.bottomContainers ?? [];
     const goldOff = restaurant?.goldOff ?? null;
     const locality = restaurant?.type === 'dining' ? restaurant?.locality ?? null : null;
@@ -28,7 +28,7 @@ function ExploreCard({ restaurant, type }) {
 
             <div className='p-[10px] w-full '>
 
-                <div className='relative w-full h-[250px]'>
+                <div className='relative w-full h-[250px] bg-custom-gradient'>
                     <img
                         src={coverImg}
                         alt={name}
@@ -124,23 +124,10 @@ function ExploreCard({ restaurant, type }) {
 
                     </div>
                 }
-
-
             </div>
-
-
-            {/*  <div key={index}>
-                          <img src={item.info.image.url} alt={item.info.name} />
-                          {item.info.name}
-                          
-        
-                          {item.info.rating.rating_text}
-                          {item.info.rating.rating_color}
-                          {item.info.costText.text}
-                          {item.order.deleverTime}
-                      </div> */}
         </div>
     )
 }
 
 export default ExploreCard
+

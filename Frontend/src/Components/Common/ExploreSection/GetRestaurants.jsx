@@ -1,52 +1,51 @@
-import React, { useEffect, useState } from 'react'
-import ExploreCard from './ExploreCard'
-import axios from 'axios'
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import ExploreCard from './ExploreCard';
+import axios from 'axios';
+import PlaceholderCard from './PlaceholderCard';
+import { useSelector } from 'react-redux';
 
-function GetRestaurants({ list, type, filter, setFilter }) {
-    let [restList, setRestList] = useState(list)
-    async function fetchRestaurants() {
-
-        // console.log('making a request');
-        // console.log(filter, 'ye hai bhai filter');
-        let res = (filter === 4.0) ? await axios.get('https://zomato-clone-server.vercel.app/restaurants/filterByRating?minRating=4&maxRating=5') : await axios.get('https://zomato-clone-server.vercel.app/restaurants')
-
-        // console.log(res, 'hello');
-        // console.log(res.data, 'res.data');
-        await setRestList(res.data)
-        // console.log(restList, 'restlist has changed');
-
-    }
-    // const fetchRestaurants = async () => {
-    //     try {
-    //         const minRating = 3;  // Replace with actual minimum rating
-    //         const maxRating = 5;  // Replace with actual maximum rating
-    //         console.log('Fetching restaurants with rating:', minRating, maxRating);
-
-    //         const res = await axios.get('http://localhost:8000/restaurants/filterByRating', {
-    //             params: { minRating, maxRating }
-    //         });
-
-    //         console.log('Response:', res.data);
-    //         setRestList(res.data);
-    //     } catch (error) {
-    //         console.error('Error fetching filtered restaurants:', error);
-    //     }
-    // };
+function GetRestaurants({ list, type }) {
+    const [restList, setRestList] = useState([]);
+    const [loading, setLoading] = useState(true);
+    // const appliedFilters = useSelector((store) => store.filter.filters);
+    // const navigate = useNavigate();
+    const location = useLocation(); //current location along with the search params
 
     useEffect(() => {
         fetchRestaurants();
-    }, [filter]);
+    }, [location.search]); // fetchRestaurants call jab bhi location.search change ho
 
-    
-    
+
+    const fetchRestaurants = async () => {
+        setLoading(true);
+        try {
+            // const response = await axios.get('http://localhost:8000/restaurants', {
+            const response = await axios.get('https://zomato-clone-server.vercel.app', {
+                params: new URLSearchParams(location.search)
+            });
+            setRestList(response.data);
+        } catch (error) {
+            console.error('Error fetching restaurants:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+
+
     return (
         <>
-            {restList && restList.length && restList.map((item, index) => (
-                <ExploreCard restaurant={item} key={index} type={type} />
-
-            ))}
+            {loading
+                ? Array(10).fill().map((_, index) => <PlaceholderCard key={index} />)
+                : restList && restList.length ? restList.map((item, index) => (
+                    <ExploreCard restaurant={item} key={index} type={type} />
+                ))
+                    : <div className='ml-0'>Sorry, no restaurants to display</div>
+            }
         </>
-    )
+    );
 }
 
-export default GetRestaurants
+export default GetRestaurants;
+
